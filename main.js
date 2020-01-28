@@ -1,7 +1,7 @@
 let text = "Bruno\nCodinha;"
 let title = document.getElementById("title")
 
-var key_sounds = ["key1.mp3", "key2.mp3, key3.mp3, key4.mp3, key5.mp3"];
+var key_sounds = ["sounds/key1.mp3", "sounds/key2.mp3", "sounds/key3.mp3", "sounds/key4.mp3", "sounds/key5.mp3"];
 var sound;
 var ind;
 
