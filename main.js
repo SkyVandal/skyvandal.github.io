@@ -5,6 +5,22 @@ var key_sounds = ["sounds/key1.mp3", "sounds/key2.mp3", "sounds/key3.mp3", "soun
 var sound;
 var ind;
 
+function sound(src) {
+	this.sound = document.createElement("audio");
+	this.sound.src = src;
+	this.sound.setAttribute("preload", "auto");
+	this.sound.setAttribute("controls", "none");
+	this.sound.style.display = "none";
+	document.body.appendChild(this.sound);
+	this.play = function(){
+	  this.sound.play();
+	}
+	this.stop = function(){
+	  this.sound.pause();
+	}
+  }
+
+
 function resetInterval() {
 	title.innerText = text 
 	let height = title.clientHeight
@@ -16,7 +32,7 @@ function resetInterval() {
 	timer = setInterval(() => {
 		if (i >= text.length) {
 			clearInterval(timer)
-			setTimeout(resetInterval, 4000)
+			setTimeout(resetInterval, 5000)
 			return
 		}
 		ind = Math.floor(Math.random() * 5);
