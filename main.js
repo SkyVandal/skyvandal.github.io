@@ -24,7 +24,7 @@ function resetInterval() {
 		sound.src = key_sounds[ind];
 		sound.play();
 		title.innerText += text[i++];
-	}, 100)
+	}, 800)
 }
 
 resetInterval()
