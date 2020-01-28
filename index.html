@@ -1,1 +1,61 @@
-asdfghvc
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet">
+	<title>Bruno Codinha</title>
+</head>
+<body>
+	<svg viewBox="0 0 100 100" id="background" preserveAspectRatio="xMinYMid slice">
+		<circle cx="0" cy="50" r="50"></circle>
+	</svg>
+	<div id="main">
+		<div id="left">
+			<div id="title">
+				Bruno <br/> Codinha
+			</div>
+		</div>
+		<div id="right">
+			<div id="box">
+				<div id="menu">
+					<div onclick="menu('about')" class="selected">About me</div>
+					<div onclick="menu('projects')">Projects</div>
+					<div onclick="menu('contact')">Contact</div>
+				</div>
+				<div id="content">
+					<div id="about">
+						Software Developer<br/>
+						<br/>
+						<span class="c-1 sb">studies</span> Computer Science @ Instituto Superior Técnico<br/>
+						lives in Lisboa, Portugal<br/>
+						<br/>
+						<span class="c-3 sb">skills</span> C++, Python, HTML/CSS & Javascript<br/>
+						<br/>
+					</div>
+					<div id="projects">
+						Cool Projects: <p/>
+						- Cool thing number 1<br/>
+						- Cool thing number 2<br/>
+						- Cool thing number 3<br/>
+						<p/>
+						<span class="c-1 sb">color 1</span><br/>
+						<span class="c-2 sb">color 2</span><br/>
+						<span class="c-3 sb">color 3</span><br/>
+					</div>
+					<div id="contact">
+						<span class="b">[Instagram]</span><br/>
+						<span class="b">[Linked In]</span><br/>
+						<span class="b">[Facebook]</span><br/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="sb" id="footer">
+		[[ GitHub ]]
+	</div> -->
+	<script src="main.js"></script>
+</body>
+</html>
