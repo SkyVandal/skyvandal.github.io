@@ -1,6 +1,9 @@
 let text = "Bruno\nCodinha;"
 let title = document.getElementById("title")
 
+var key_sounds = ["key1.mp3", "key2.mp3, key3.mp3, key4.mp3, key5.mp3"];
+var sound;
+var ind;
 
 function resetInterval() {
 	title.innerText = text 
@@ -13,9 +16,12 @@ function resetInterval() {
 	timer = setInterval(() => {
 		if (i >= text.length) {
 			clearInterval(timer)
-			setTimeout(resetInterval, 500)
+			setTimeout(resetInterval, 4000)
 			return
 		}
+		ind = Math.floor(Math.random() * 5);
+		sound = new sound(key_sounds[ind]);
+		sound.play();
 		title.innerText += text[i++]
 	}, 100)
 }
