@@ -23,7 +23,7 @@ function resetInterval() {
 		ind = Math.floor(Math.random() * 5);
 		sound = new Audio(key_sounds[ind]);
 		sound.play();
-		title.innerText += text[i++]
+		title.innerText += text[i++];
 	}, 100)
 }
 
