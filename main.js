@@ -13,7 +13,7 @@ function resetInterval() {
 	timer = setInterval(() => {
 		if (i >= text.length) {
 			clearInterval(timer)
-			setTimeout(resetInterval, 5000)
+			setTimeout(resetInterval, 500)
 			return
 		}
 		title.innerText += text[i++]
