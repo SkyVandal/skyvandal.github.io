@@ -2,7 +2,7 @@ let text = "Bruno\nCodinha;"
 let title = document.getElementById("title")
 
 var key_sounds = ["sounds/key1.mp3", "sounds/key2.mp3", "sounds/key3.mp3", "sounds/key4.mp3", "sounds/key5.mp3"];
-var sound;
+var sound = new Audio();
 var ind;
 
 
@@ -21,7 +21,7 @@ function resetInterval() {
 			return
 		}
 		ind = Math.floor(Math.random() * 5);
-		sound = new Audio(key_sounds[ind]);
+		sound.src = key_sounds[ind];
 		sound.play();
 		title.innerText += text[i++];
 	}, 100)
