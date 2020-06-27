@@ -27,7 +27,6 @@ function resetInterval() {
 			return
 		}
 		let x = i++
-		playSound()
 		setTimeout(() => title.innerText += text[x], 400)
 	}, 100)
 }
