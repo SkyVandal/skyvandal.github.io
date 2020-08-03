@@ -12,10 +12,10 @@ function playSound() {
 }
 
 function resetInterval() {
-	title.innerText = text 
+	title.innerText = text
 	let height = title.clientHeight
 	title.style.minHeight = height + "px"
-	
+
 	title.innerText = ""
 	let i = 0
 	let timer = null
@@ -23,7 +23,7 @@ function resetInterval() {
 	timer = setInterval(() => {
 		if (i >= text.length) {
 			clearInterval(timer)
-			setTimeout(resetInterval, 5000)
+			setTimeout(resetInterval, 10000)
 			return
 		}
 		let x = i++
@@ -37,7 +37,7 @@ function menu(id) {
 	for (let k of document.getElementById("menu").children)
 		k.classList.remove("selected")
 	event.target.classList.add("selected")
-	
+
 	for (let k of document.getElementById("content").children)
 		k.style.display = "none"
 	document.getElementById(id).style.display = "initial";
