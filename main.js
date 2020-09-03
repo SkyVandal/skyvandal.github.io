@@ -1,44 +1,17 @@
-let text = "Bruno\nCodinha;"
-let title = document.getElementById("title")
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
-var key_sounds = ["sounds/key1.mp3", "sounds/key2.mp3", "sounds/key3.mp3", "sounds/key4.mp3", "sounds/key5.mp3"];
-var ind;
+// Get the header
+var header = document.getElementById("myHeader");
 
-function playSound() {
-	var sound = new Audio();
-	ind = Math.floor(Math.random() * 5);
-	sound.src = key_sounds[ind];
-	sound.play();
-}
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
 
-function resetInterval() {
-	title.innerText = text
-	let height = title.clientHeight
-	title.style.minHeight = height + "px"
-
-	title.innerText = ""
-	let i = 0
-	let timer = null
-
-	timer = setInterval(() => {
-		if (i >= text.length) {
-			clearInterval(timer)
-			setTimeout(resetInterval, 10000)
-			return
-		}
-		let x = i++
-		setTimeout(() => title.innerText += text[x], 400)
-	}, 100)
-}
-
-resetInterval()
-
-function menu(id) {
-	for (let k of document.getElementById("menu").children)
-		k.classList.remove("selected")
-	event.target.classList.add("selected")
-
-	for (let k of document.getElementById("content").children)
-		k.style.display = "none"
-	document.getElementById(id).style.display = "initial";
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
