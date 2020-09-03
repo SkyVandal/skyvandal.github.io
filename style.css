@@ -16,25 +16,45 @@ body, html {
 	font: 16px 'Fira Code';
 }
 
+.image-container {
+
+}
+
 .btn-resume {
-	background-color: dodgerblue;
-	color: white;
+	background-color: #ddd;
+	font-weight: bold;
+	color: black;
   text-align: center;
   padding: 8px;
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
-  border-radius: 6px;
+  border-radius: 20px;
 }
 
 .btn-resume a:hover {
-	color:
+	color: black;
 }
 
 .header {
   overflow: hidden;
   padding: 20px 10px;
 }
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
 
 /* Style the header links */
 .header a {
@@ -60,30 +80,11 @@ body, html {
   color: black;
 }
 
-/* Style the active/current link*/
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
 /* Float the link section to the right */
 .header-right {
   float: right;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky + .content {
-  padding-top: 102px;
-}
 
 .parallax {
 	text-align: center;
@@ -100,6 +101,40 @@ body, html {
 
 .home-parallax {
 	background-image: url("images/github.png");
+}
+
+.about-parallax {
+	background-image: url("images/github.png");
+}
+
+.services-parallax {
+	background-image: url("images/github.png");
+}
+
+.mypicture {
+	width:80%;
+	height:80%;
+	margin-top: -25%;
+	margin-bottom: 1%;
+}
+
+footer {
+  text-align: center;
+	padding: 10px 20px;
+  background-color: #ddd;
+  color: white;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
