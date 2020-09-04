@@ -19,7 +19,9 @@ h4 {
 }
 .mypicture {
 	width: 75%;
-	margin-bottom: 15%;
+	margin-bottom: 30%;
+	margin-top: -15%;
+	margin-left: 10%;
 }
 .jumbotron {
 	background-color: #CBD0D8;
