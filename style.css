@@ -19,6 +19,7 @@ h4 {
 }
 .mypicture {
 	width: 100%;
+	margin-bottom: 10%;
 }
 .jumbotron {
 	background-color: #CBD0D8;
@@ -137,6 +138,10 @@ h4 {
 .navbar-default .navbar-toggle {
 	border-color: transparent;
 	color: #bbbbbb !important;
+}
+
+footer{
+	background-color: #F4F3EA;
 }
 footer .glyphicon {
 	font-size: 20px;
